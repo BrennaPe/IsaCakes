@@ -1,0 +1,261 @@
+@import url(global.css);
+    /* font-family: "brittany", sans-serif; */
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    background-color: antiquewhite;
+    background-image: url(assets/images/teste2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--colorFontbright2);
+    backdrop-filter: blur(2px);
+}
+
+/* ================HEADER================== */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    /* border-bottom: .5px solid var(--colorFontbright2); */
+    background-color: var(--colorBackground);
+}
+
+.header_logo .short-name{
+    display: none;
+}
+
+.header_logo .full-name{
+    display: inline;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* header .header_logo{
+    border: 1px solid rgb(252, 2, 2);
+} */
+
+header nav{
+    /* border: 1px solid rgb(98, 243, 14); */
+    display: flex;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    /* border: 1px solid rgb(252, 2, 2); */
+}
+
+header nav ul a{
+    text-decoration: none;
+    color: var(--colorFontbright2);
+}
+header nav ul a:hover{
+    color: #C22940;
+    font-weight: 400;
+}
+
+.hamburgerIcon{
+    display: none;
+}
+
+.hamburguerMenuTab{
+    display: none;
+}
+/* ==================MAIN================== */
+
+main{
+    /* border: 1px solid rgb(98, 243, 14); */
+    height: 89%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .cidade{
+    /* border: 1px solid rgb(2, 31, 252); */
+    margin: 1rem 0rem;
+    font-family: "Corinthia", cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--colorFontbright2);
+    text-shadow: 1px 1px 2px rgb(67, 67, 67), 0 0 25px rgb(48, 48, 48), 0 0 5px rgb(1, 1, 1);
+
+}
+
+/* main nav{
+    border: 2px solid rgb(0, 0, 0);
+} */
+
+
+
+main .mainOptions{
+    /* border: 1px solid rgb(252, 2, 2); */
+    display: flex;
+    gap: 1.5rem;
+}
+
+.mainOptions li{
+    list-style: none;
+}
+.mainOptions li a{
+    text-decoration: none;
+    font-weight: 300;
+    color: var(--colorFontbright);
+    text-shadow: 1px 1px 2px rgb(67, 67, 67), 0 0 25px rgb(48, 48, 48), 0 0 5px rgb(1, 1, 1);
+    transition: border-bottom 0.2s ease;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.mainOptions li a:hover{
+    cursor: pointer;
+    border-bottom: .2rem solid #C22940;
+    font-weight: 400;
+}
+
+/* ===================FOOTER================== */
+
+footer{
+    /* border: 1px solid rgb(252, 2, 2); */
+    text-align: center;
+    font-size: .7rem;
+    color: rgba(255, 255, 255, 0.545);
+}
+
+
+/* ========MEDIA QUERY DESKTOP=============== */
+
+@media (min-width: 1024px){
+
+    header{
+    padding: 1rem 20rem;
+}
+
+
+    main .cidade{
+        font-size: 5rem;
+    }
+
+    main .mainOptions li a{
+        font-size: 1.3rem;
+    }
+
+}
+
+/* ========MEDIA QUERY PHONE=============== */
+
+@media (max-width: 600px){
+
+    body{
+        background-image: url(assets/images/testeBlur.jpg);
+    }
+
+    header{
+    border-bottom: 1px solid #e7dddccb;
+    background-color: transparent;
+    }
+
+        /* ===== Switch logo text on mobile ===== */
+    .header_logo .full-name{
+        display: none;
+        
+    }
+
+    .header_logo .short-name{
+        display: inline;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+    
+    .hamburgerIcon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .bigScreenMenuTab{
+        display: none;
+    }
+
+    .hamburguerMenuTab{
+        display: none;
+    }
+
+    main{
+        height: 87%;
+    }
+        main div.cidade{
+        display: none;
+    }
+
+        main .mainOptions{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        text-transform: uppercase;
+        color: #e7dddc;
+    }
+        main .mainOptions li a{
+        color: #e7dddc;
+        text-shadow: none;
+        font-weight: 300;
+    }
+
+
+    /* ======================TABMENU========== */
+
+    .hamburguerMenuTab{
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        background-color: rgba(194, 41, 64, 0.931);
+        backdrop-filter: blur(15px);
+        height: 100%;
+        width: 100%;
+    }
+
+    .hamburguerMenuTab ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        list-style: none;
+        height: 100%;
+    }
+
+    .hamburguerMenuTab ul a{
+        color: #e7dddc;
+        font-size: 1em;
+    }
+    
+     .hamburguerMenuTab ul a:hover{
+        color: #e7dddc;
+        font-weight: 600;}
+
+
+    .closeIcon{
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+    }
+        /* ==================== */
+}

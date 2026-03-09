@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'brittany';
+    src: url(BrittanySignature.ttf) format('truetype');
+    font-weight: normal;
+}
+
+:root{
+    --font-family: "Montserrat", sans-serif;
+    --colorFont: rgb(33, 33, 33);
+    --colorFontbright: rgb(244, 244, 244);
+    --colorFontbright2: #fffbf4;
+    --colorBackground: rgba(199, 84, 101, 0.461);
+    --mainColor:#C22940;
+    --mainColorDark:#841728;
+    --colorBackgroundGradient: linear-gradient(267deg,rgba(222, 109, 126, 1) 0%, rgba(194, 41, 64, 1) 100%);
+
+}

@@ -1,0 +1,157 @@
+@import url(global.css);
+    /* font-family: "brittany", sans-serif; */
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: "Montserrat", sans-serif;
+    color: var(--mainColor);
+    background-color: var(--colorFontbright2);
+    backdrop-filter: blur(2px);
+    @font-face {
+    font-family: 'brittany';
+    src: url(BrittanySignature.ttf) format('truetype');
+    font-weight: normal;
+}
+
+}
+
+/* ================HEADER================== */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-bottom: .05rem solid var(--colorFontbright2);
+    /* border-bottom: .5px solid var(--colorFontbright2); */
+}
+
+.header_logo .short-name{
+    display: none;
+}
+
+.header_logo .full-name{
+    display: inline;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+/* header .header_logo{
+    border: 1px solid rgb(252, 2, 2);
+} */
+
+header nav{
+    /* border: 1px solid rgb(98, 243, 14); */
+    display: flex;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    /* border: 1px solid rgb(252, 2, 2); */
+}
+
+header nav ul a{
+    text-decoration: none;
+    color: var(--mainColor);
+}
+header nav ul a:hover{
+    color: var(--mainColor);
+    font-weight: 400;
+}
+
+.hamburgerIcon{
+    display: none;
+}
+
+.hamburguerMenuTab{
+    display: none;
+}
+
+
+/* ====================FirstSection=========== */
+
+.firstSection{
+    background-color: var(--mainColor);
+    color: var(--mainColorDark);
+    padding: 3rem 2rem;
+}
+
+section .preOrder{
+    font-size: .8rem;
+    color: var(--mainColorDark);
+    margin-bottom: .5rem;
+}
+
+section h1{
+    font-size: 1.5rem;
+    margin: .5rem 0rem;
+}
+
+section .name{
+    font-family: "Corinthia", cursive;
+    font-size: 2rem;
+    color: var(--colorFontbright2);
+}
+
+
+
+section button{
+    padding: .5rem 1rem;
+    background-color: var(--colorFontbright2);
+    border: none;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+    font-weight: 600;
+    color: var(--mainColorDark);
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+/* ====================Main=========== */
+
+.txtMain{
+    /* border: 1px solid rgb(252, 2, 2); */
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    margin: 2rem 2rem;
+}
+
+.craft{
+    font-size: .8rem;
+}
+
+.emphasis{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.adress{
+    font-size: 1rem;
+}
+
+/* =====================Creations===========  */
+#images-creations{
+    border-bottom: .5px solid var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 2rem;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+#images-creations h2{
+    font-size: 1.2rem;
+}
+
+#images-creations p{
+    font-size: .8rem;
+}

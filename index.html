@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header_logo">
+            <span class="full-name">Isa Artisan Cakes</span>
+            <span class="short-name">Isa Cakes</span>
+        </div>
+        
+        <nav class="bigScreenMenuTab">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Got Questions?</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburgerIcon" id="hamburguerIcon"  aria-label="Open menu" onclick="OpenTab()"><img src="assets/images/menuLight.png" alt=""></button>
+
+        <nav class="hamburguerMenuTab" id="menuTab">
+            <button class="closeIcon" id="closeIcon"  aria-label="close menu" onclick="CloseTab()"><img src="assets/images/close.png" alt=""></button>
+            
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Got Questions?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="cidade">Galway</div>
+        <nav>
+            <ul class="mainOptions">
+                <li><a href="signatureCakes.html">Signature Cakes</a></li>
+                <li><a href="sweetGems.html">Sweet Gems</a></li>
+                <li><a href="giftCollections.html">Gift Collections</a></li>
+            </ul>
+        </nav>
+    </main>
+
+    <footer>
+            <div class="footerInfo">
+                <p>2026 Isa Artisan Cakes.</p>
+                <p>A site by Brenna Westphal</p>
+            </div>
+    </footer>
+</body>
+
+
+<script>
+
+    function OpenTab() {
+        let menuTab = document.getElementById("menuTab");
+        if(menuTab.style.display === "block"){
+            menuTab.style.display = "none";
+        } else {
+            menuTab.style.display = "block";}
+            }
+            
+    function CloseTab() {
+        let menuTab = document.getElementById("menuTab");
+        menuTab.style.display = "none";
+    }
+</script>
+
+</html>
