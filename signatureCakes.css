@@ -155,3 +155,9 @@ section button{
 #images-creations p{
     font-size: .8rem;
 }
+
+/* ===================choosingCake=========== */
+
+.choosingCake{
+    border: 1px solid red;
+}

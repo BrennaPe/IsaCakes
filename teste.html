@@ -1,0 +1,117 @@
+return (
+    <div className="claim-container">
+      <div className="no-print flex items-center justify-between mb-6">
+        <h1 className="text-2xl tracking-tight font-semibold text-foreground">Claim — IND</h1>
+        <h1 className="text-2xl tracking-tight font-semibold text-foreground">Goods Return Record — IND</h1>
+        <div className="flex gap-2">
+          <Button variant="outline" onClick={() => window.print()}>Print</Button>
+          <Button onClick={onFinalize}>Finalize & Mark Actioned</Button>
+        </div>
+      </div>
+      {/* Header notice */}
+      <div className="bg-destructive/10 text-destructive text-xs font-semibold rounded-lg p-3 mb-4 text-center print:bg-transparent print:text-black print:border print:border-black">
+        IMPORTANT: RETURNS MUST BE NOTIFIED WITHIN 3 DAYS OF DELIVERY BY FAXING THIS COMPLETED FORM TO I.I.H.F ON 026 65768
+      </div>
+      <h2 className="text-xl font-bold text-center mb-4">GOODS RETURN RECORD</h2>
+      <div className="bg-card rounded-xl p-6 card-elevated mb-6">
+        <div className="max-w-xs">
+          <label className="text-xs font-medium text-muted-foreground">Invoice Number</label>
+          <Input value={issues[0].invoiceNumber} readOnly className="mt-1 bg-muted" />
+        </div>
+      </div>
+      <ClaimTable
+        columns={['Product Code', 'Description', 'Qty', 'Reason Code', 'Comment', 'Value', 'VAT']}
+        rows={rows}
+        updateRow={updateRow}
+        fields={['sku', 'description', 'quantity', 'claimCode', 'furtherInfo', 'value', 'vat']}
+      />
+        <div className="grid grid-cols-2 gap-4 max-w-lg">
+          <div>
+            <label className="text-xs font-medium text-muted-foreground">Account Name</label>
+            <Input value="Nourish Knocknacarra" readOnly className="mt-1 bg-muted" />
+          </div>
+          <div>
+            <label className="text-xs font-medium text-muted-foreground">IHF Account</label>
+            <Input value="27115" readOnly className="mt-1 bg-muted" />
+          </div>
+        </div>
+      </div>
+      <div className="bg-card rounded-xl card-elevated overflow-hidden mb-6">
+        <table className="w-full text-left text-sm">
+          <thead>
+            <tr className="border-b border-border">
+              <th className="p-3 font-medium text-muted-foreground">Invoice No.</th>
+              <th className="p-3 font-medium text-muted-foreground">Product Code</th>
+              <th className="p-3 font-medium text-muted-foreground">Description</th>
+              <th className="p-3 font-medium text-muted-foreground">Quantity</th>
+              <th className="p-3 font-medium text-muted-foreground">Reason for Return</th>
+              <th className="p-3 font-medium text-muted-foreground">Comment</th>
+              <th className="p-3 font-medium text-muted-foreground">Value</th>
+              <th className="p-3 font-medium text-muted-foreground">VAT</th>
+              <th className="p-3 font-medium text-muted-foreground">Driver Check</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rows.map((row, idx) => (
+              <tr key={idx} className="border-b border-border last:border-0">
+                <td className="p-2">
+                  <Input value={issues[idx]?.invoiceNumber || ''} readOnly className="text-sm h-8 bg-transparent border-transparent tabular-nums" />
+                </td>
+                <td className="p-2">
+                  <Input value={row.sku} readOnly className="text-sm h-8 bg-transparent border-transparent" />
+                </td>
+                <td className="p-2">
+                  <Input value={row.description} readOnly className="text-sm h-8 bg-transparent border-transparent" />
+                </td>
+                <td className="p-2">
+                  <Input value={String(row.quantity)} readOnly className="text-sm h-8 bg-transparent border-transparent tabular-nums" />
+                </td>
+                <td className="p-2">
+                  <Input value={row.claimCode} onChange={e => updateRow(idx, 'claimCode', e.target.value)} className="text-sm h-8" />
+                </td>
+                <td className="p-2">
+                  <Input value={row.furtherInfo} onChange={e => updateRow(idx, 'furtherInfo', e.target.value)} className="text-sm h-8" />
+                </td>
+                <td className="p-2">
+                  <Input value={row.value} onChange={e => updateRow(idx, 'value', e.target.value)} className="text-sm h-8" />
+                </td>
+                <td className="p-2">
+                  <Input value={row.vat || ''} onChange={e => updateRow(idx, 'vat', e.target.value)} className="text-sm h-8" />
+                </td>
+                <td className="p-2">
+                  <Input className="text-sm h-8" placeholder="" />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {/* Reason codes legend */}
+      <div className="bg-card rounded-xl p-6 card-elevated mb-6">
+        <h3 className="text-sm font-semibold mb-3 text-foreground">EXPLANATION OF REASON CODES</h3>
+        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 text-xs">
+          <div className="bg-muted rounded p-2"><span className="font-bold">A</span> — Not delivered</div>
+          <div className="bg-muted rounded p-2"><span className="font-bold">B</span> — Damaged</div>
+          <div className="bg-muted rounded p-2"><span className="font-bold">C</span> — Short</div>
+          <div className="bg-muted rounded p-2"><span className="font-bold">D</span> — Date</div>
+          <div className="bg-muted rounded p-2"><span className="font-bold">E</span> — Incorrectly Ordered</div>
+          <div className="bg-muted rounded p-2"><span className="font-bold">F</span> — Delivered, not invoiced</div>
+        </div>
+        <p className="text-xs text-muted-foreground mt-2">Other — please describe in your own words in the Comment column.</p>
+      </div>
+      {/* Signatures */}
+      <div className="bg-card rounded-xl p-6 card-elevated">
+        <div className="grid grid-cols-2 gap-6">
+          <div>
+            <label className="text-xs font-medium text-muted-foreground">Customer Contact Signature</label>
+            <div className="mt-1 h-12 border border-border rounded-md" />
+          </div>
+          <div>
+            <label className="text-xs font-medium text-muted-foreground">Accepted by IIHF Driver / Date</label>
+            <div className="mt-1 h-12 border border-border rounded-md" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
