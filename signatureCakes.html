@@ -1,253 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signature Cakes</title>
-    <link rel="stylesheet" href="signatureCakes.css">
-    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-        <header>
-        <div class="header_logo">
-            <span class="full-name">Isa Artisan Cakes</span>
-            <span class="short-name">Isa Cakes</span>
-        </div>
-        
-        <nav class="bigScreenMenuTab">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Got Questions?</a></li>
-            </ul>
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isa Artisan Cakes</title>
 
-        <button class="hamburgerIcon" id="hamburguerIcon"  aria-label="Open menu" onclick="OpenTab()"><img src="assets/images/menuLight.png" alt=""></button>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
-        <nav class="hamburguerMenuTab" id="menuTab">
-            <button class="closeIcon" id="closeIcon"  aria-label="close menu" onclick="CloseTab()"><img src="assets/images/close.png" alt=""></button>
-            
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Got Questions?</a></li>
-            </ul>
-        </nav>
+    <!-- Styles -->
+    <link rel="stylesheet" href="signatureCakes.css" />
+  </head>
+
+  <body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header>
+
+      <div class="header_logo">
+        <span class="full-name">Isa Artisan Cakes</span>
+        <span class="short-name">Isa Cakes</span>
+      </div>
+
+      <!-- Desktop nav -->
+      <nav class="bigScreenMenuTab" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Got Questions?</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger button -->
+      <button
+        class="hamburgerIcon"
+        id="hamburgerIcon"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+        onclick="toggleMenu()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Mobile nav -->
+      <nav
+        class="hamburguerMenuTab"
+        id="mobileMenu"
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+      >
+        <ul>
+          <li><a href="#" onclick="closeMenu()">Home</a></li>
+          <li><a href="#" onclick="closeMenu()">Contact</a></li>
+          <li><a href="#" onclick="closeMenu()">Got Questions?</a></li>
+        </ul>
+      </nav>
+
     </header>
 
-    <section class="firstSection">
-        <p class="preOrder">Custom Cake | by pre-order</p>
-        <h1>Signature Cakes by <span class="name">Isabel Malheiros</span> </h1>
-        <button>PLACE ORDER</button>
+    <!-- ===================== HERO ===================== -->
+    <section class="firstSection" aria-label="Hero">
+      <p class="preOrder">Custom Cake | by pre-order</p>
+      <h1>Signature Cakes by <span class="name">Isabel Malheiros</span></h1>
+      <a href="#chooseCake" class="order-btn">PLACE ORDER</a>
     </section>
 
+    <!-- ===================== MAIN ===================== -->
     <main>
-        <div class="txtMain">
-            <p class="craft">Crafted with the finest ingredients</p>
-            <p class="emphasis">Where Brazilian sweetness meets Irish charm.</p>
-            <p class="adress">4 Loughlane Galway 12802 Ireland. Wednesday to Sunday - 8:00 am to 5:00 pm</p>
+
+      <!-- Intro text -->
+      <div class="txtMain">
+        <p class="craft">Crafted with the finest ingredients</p>
+        <p class="emphasis">Where Brazilian sweetness meets Irish charm.</p>
+        <p class="adress">4 Loughlane Galway 12802 Ireland &middot; Wednesday to Sunday &ndash; 8:00&nbsp;am to 5:00&nbsp;pm</p>
+      </div>
+
+      <!-- ===== Creations gallery ===== -->
+      <section id="images-creations" aria-label="Our creations">
+
+        <figure>
+          <img src="assets/images/2.png" alt="Halo cake" loading="lazy" />
+          <figcaption>
+            <h2>Halo</h2>
+            <p>From &euro;12.00</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/images/3.png" alt="Gild cake" loading="lazy" />
+          <figcaption>
+            <h2>Gild</h2>
+            <p>From &euro;18.00</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/images/5.png" alt="Velour cake" loading="lazy" />
+          <figcaption>
+            <h2>Velour</h2>
+            <p>From &euro;24.00</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/images/6.png" alt="Lustre cake" loading="lazy" />
+          <figcaption>
+            <h2>Lustre</h2>
+            <p>From &euro;130.00</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/images/7.png" alt="Crème cake" loading="lazy" />
+          <figcaption>
+            <h2>Cr&egrave;me</h2>
+            <p>From &euro;85.00</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/images/8.png" alt="Solace cake" loading="lazy" />
+          <figcaption>
+            <h2>Solace</h2>
+            <p>From &euro;90.00</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/images/9.png" alt="Bloom cake" loading="lazy" />
+          <figcaption>
+            <h2>Bloom</h2>
+            <p>From &euro;200.00</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/images/10.png" alt="Élan cake" loading="lazy" />
+          <figcaption>
+            <h2>&Eacute;lan</h2>
+            <p>From &euro;195.00</p>
+          </figcaption>
+        </figure>
+
+        <figure>
+          <img src="assets/images/11.png" alt="Élan variant cake" loading="lazy" />
+          <figcaption>
+            <h2>&Eacute;lan</h2>
+            <p>From &euro;195.00</p>
+          </figcaption>
+        </figure>
+
+      </section>
+
+      <!-- ===== Order / Cake chooser ===== -->
+      <section class="choosingCake" id="chooseCake" aria-label="Choose your cake">
+
+        <h2>How to choose your cake</h2>
+        <p>To ensure your cake is perfect for your special occasion, please consider the following when placing your order:</p>
+
+        <!-- STEP 1 — Size -->
+        <div class="step">
+          <h2>1. Begin by choosing your cake size</h2>
+          <p class="subtitle">Which one would you prefer?</p>
+          <ul class="options" data-type="size" role="listbox" aria-label="Cake size">
+            <li data-value="Mini" role="option" aria-selected="false">Mini &ndash; 1 filling layer (serves up to 6) <span class="price">&euro;25</span></li>
+            <li data-value="Small" role="option" aria-selected="false">Small &ndash; 2 filling layers (serves 10&ndash;12) <span class="price">&euro;35</span></li>
+            <li data-value="Medium" role="option" aria-selected="false">Medium &ndash; 3 filling layers (serves 15&ndash;20) <span class="price">&euro;55</span></li>
+            <li data-value="Large" role="option" aria-selected="false">Large &ndash; 4 filling layers (serves 25&ndash;30) <span class="price">&euro;65</span></li>
+            <li data-value="Extra Large" role="option" aria-selected="false">Extra Large &ndash; 25&nbsp;cm cake (serves 35&ndash;40) <span class="price">&euro;90</span></li>
+          </ul>
         </div>
-         <section id="images-creations">
 
-            <figure>
-                <img src="assets/images/2.png" alt="">
-                <figcaption>
-                    <h2>Halo</h2>
-                    <p>From €12.00</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/images/3.png" alt="">
-                <figcaption>
-                    <h2>Gild</h2>
-                    <p>From €18.00</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/images/5.png" alt="">
-                <figcaption>
-                    <h2>Velour</h2>
-                    <p>From €24.00</p>
-                </figcaption>
-            </figure>
+        <!-- STEP 2 — Sponge -->
+        <div class="step">
+          <h2>2. Now, choose your sponge</h2>
+          <p class="subtitle">Which would you like?</p>
+          <ul class="options" data-type="sponge" role="listbox" aria-label="Sponge type">
+            <li data-value="Vanilla" role="option" aria-selected="false">Vanilla (classic sponge)</li>
+            <li data-value="Chocolate" role="option" aria-selected="false">Chocolate (smooth yet rich)</li>
+          </ul>
+        </div>
 
-            <figure>
-                <img src="assets/images/6.png" alt="">
-                <figcaption>
-                    <h2>Lustre</h2>
-                    <p>From €130.00</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/images/7.png" alt="">
-                <figcaption>
-                    <h2>Crème</h2>
-                    <p>From €85.00</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/images/8.png" alt="">
-                <figcaption>
-                    <h2>Solace</h2>
-                    <p>From €90.00</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/images/9.png" alt="">
-                <figcaption>
-                    <h2>Bloom</h2>
-                    <p>From €200.00</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/images/10.png" alt="">
-                <figcaption>
-                    <h2>Élan</h2>
-                    <p>From €195.00</p>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="assets/images/11.png" alt="">
-                <figcaption>
-                    <h2>Élan</h2>
-                    <p>From €195.00</p>
-                </figcaption>
-            </figure>
-        </section>
+        <!-- STEP 3 — Fillings -->
+        <div class="step">
+          <h2>3. Hmm&hellip; now for the best part: the filling!</h2>
+          <p>You may choose up to <strong>two delicious fillings</strong>.</p>
 
-        <section class="choosingCake">
-            <h2>How to choose your cake</h2>
-            <p>To ensure your cake is perfect for your special occasion, please consider the following when placing your order:</p>
+          <div class="fillings">
 
-            <div class="step">
-                <h2>1. Begin by choosing your cake size</h2>
-                <p class="subtitle">Which one would you prefer?</p>
+          <div class="filling-group">
+            <h3>Brigadeiro Bases</h3>
+            <ul class="options multi" data-type="fillings" role="listbox" aria-multiselectable="true" aria-label="Brigadeiro fillings">
+              <li data-value="Ninho" role="option" aria-selected="false">Ninho</li>
+              <li data-value="Classic Brigadeiro" role="option" aria-selected="false">Classic Brigadeiro</li>
+              <li data-value="Dulce de Leche Brigadeiro" role="option" aria-selected="false">Dulce de Leche Brigadeiro</li>
+              <li data-value="Paçoca Brigadeiro" role="option" aria-selected="false">Pa&ccedil;oca Brigadeiro</li>
+              <li data-value="Walnut Brigadeiro" role="option" aria-selected="false">Walnut Brigadeiro</li>
+              <li data-value="Beijinho" role="option" aria-selected="false">Beijinho</li>
+              <li data-value="Mascarpone" role="option" aria-selected="false">Mascarpone</li>
+              <li data-value="Pistachio" role="option" aria-selected="false">Pistachio</li>
+            </ul>
+          </div>
 
-        <ul class="options">
-            <li>
-                <span><strong>Mini</strong> – 1 filling layer (serves up to 6)</span>
-                <span class="price">€25</span>
-            </li>
+          <div class="filling-group">
+            <h3>You may also add</h3>
+            <ul class="options multi" data-type="fillings" role="listbox" aria-multiselectable="true" aria-label="Extra fillings">
+              <li data-value="Red berries" role="option" aria-selected="false">Red berries</li>
+              <li data-value="Pineapple" role="option" aria-selected="false">Pineapple</li>
+              <li data-value="Grapes" role="option" aria-selected="false">Grapes</li>
+              <li data-value="Cherries" role="option" aria-selected="false">Cherries</li>
+              <li data-value="Plums" role="option" aria-selected="false">Plums</li>
+              <li data-value="Walnuts" role="option" aria-selected="false">Walnuts</li>
+            </ul>
+            <p class="extra-note">Nutella or specialty chocolates: additional charge may apply.</p>
+          </div>
 
-            <li>
-                <span><strong>Small</strong> – 2 filling layers (serves 10–12)</span>
-                <span class="price">€35</span>
-            </li>
+        </div>
+        </div>
 
-            <li>
-                <span><strong>Medium</strong> – 3 filling layers (serves 15–20)</span>
-                <span class="price">€55</span>
-            </li>
+        <!-- STEP 4 — Decoration -->
+        <div class="step step4">
+          <h2>4. Finally&hellip; the finishing touch: decoration</h2>
+          <p class="subtitle">How our cake decoration works</p>
 
-            <li>
-                <span><strong>Large</strong> – 4 filling layers (serves 25–30)</span>
-                <span class="price">€65</span>
-            </li>
+          <div class="finalization">
+            <h3>Finishing</h3>
+            <p>Each cake is decorated with care to match the chosen flavor and the occasion. Our decorations are thoughtfully designed to create a beautiful and balanced presentation.</p>
+            <p>Please note that fruit compotes or extra sweets may involve an additional cost. This can be discussed when confirming your order.</p>
+            <p>And don&rsquo;t forget to tell us your preferred ribbon color, so your cake can be even more personalized.</p>
+          </div>
+        </div>
 
-            <li>
-                <span><strong>Extra Large</strong> – 25cm cake (serves 35–40)</span>
-                <span class="price">€90</span>
-            </li>
-        </ul>
-    </div>
+        <!-- Order summary -->
+        <div class="message-box">
+          <h3>Your Cake Summary</h3>
 
+          <div class="extra-fields">
+            <input type="date" id="cakeDate" aria-label="Cake date" />
+            <input type="time" id="cakeTime" aria-label="Cake time" />
+            <select id="deliveryOption" aria-label="Delivery option">
+              <option value="Pickup">Pickup (collect in store)</option>
+              <option value="Delivery">Home delivery</option>
+            </select>
+          </div>
 
-    <div class="step">
-        <h2>2. Now, choose your sponge</h2>
-        <p class="subtitle">Which would you like?</p>
+          <textarea id="finalMessage" readonly aria-label="Order summary" aria-live="polite"></textarea>
 
-        <ul class="options">
-            <li>Vanilla <em>(classic sponge)</em></li>
-            <li>Chocolate <em>(smooth yet rich)</em></li>
-        </ul>
-    </div>
+          <div class="actions">
+            <button type="button" onclick="sendEmail()">Send Email</button>
+            <button type="button" onclick="sendWhatsApp()">Send WhatsApp</button>
+          </div>
+        </div>
 
-    <h2>3. Hmm… now for the best part: the filling!</h2>
-<p>You may choose up to <strong>two delicious fillings</strong>.</p>
+      </section>
 
-<div class="fillings">
-
-<div class="filling-group">
-<h3>Brigadeiro Bases</h3>
-<ul>
-<li>Ninho</li>
-<li>Classic Brigadeiro</li>
-<li>Dulce de Leche Brigadeiro</li>
-<li>Paçoca Brigadeiro</li>
-<li>Walnut Brigadeiro</li>
-<li>Beijinho</li>
-<li>Mascarpone</li>
-<li>Pistachio</li>
-</ul>
-</div>
-
-<div class="filling-group">
-<h3>You may also add</h3>
-<ul>
-<li>Red berries</li>
-<li>Pineapple</li>
-<li>Grapes</li>
-<li>Cherries</li>
-<li>Plums</li>
-<li>Walnuts</li>
-</ul>
-
-<p class="extra-note">
-Nutella or specialty chocolates: additional charge may apply.
-</p>
-
-</div>
-
-</div>
-</section>
-
-
-<section class="step4">
-
-<h2>4. Finally… the finishing touch: decoration</h2>
-<p class="subtitle">How our cake decoration works</p>
-
-<div class="finalization">
-
-<h3>Finishing</h3>
-
-<p>
-Each cake is decorated with care to match the chosen flavor and the occasion.
-Our decorations are thoughtfully designed to create a beautiful and balanced presentation.
-</p>
-
-<p>
-Please note that fruit compotes or extra sweets may involve an additional cost.
-This can be discussed when confirming your order.
-</p>
-
-<p>
-And don’t forget to tell us your preferred ribbon color,
-so your cake can be even more personalized.
-</p>
-
-</div>
-
-        </section>
     </main>
-</body>
 
+    <!-- ===================== SCRIPTS ===================== -->
+    <script>
 
-<script>
+      /* ---- Hamburger menu ---- */
 
-    function OpenTab() {
-        let menuTab = document.getElementById("menuTab");
-        if(menuTab.style.display === "block"){
-            menuTab.style.display = "none";
-        } else {
-            menuTab.style.display = "block";}
+      const hamburgerIcon = document.getElementById("hamburgerIcon");
+      const mobileMenu    = document.getElementById("mobileMenu");
+
+      function toggleMenu() {
+        const isOpen = mobileMenu.classList.toggle("is-open");
+        hamburgerIcon.classList.toggle("is-open", isOpen);
+        hamburgerIcon.setAttribute("aria-expanded", String(isOpen));
+        mobileMenu.setAttribute("aria-hidden",      String(!isOpen));
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove("is-open");
+        hamburgerIcon.classList.remove("is-open");
+        hamburgerIcon.setAttribute("aria-expanded", "false");
+        mobileMenu.setAttribute("aria-hidden",      "true");
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (e) {
+        if (!hamburgerIcon.contains(e.target) && !mobileMenu.contains(e.target)) {
+          closeMenu();
+        }
+      });
+
+      /* ---- Cake selection state ---- */
+
+      const state = {
+        size:     "",
+        sponge:   "",
+        fillings: []
+      };
+
+      document.querySelectorAll(".options li").forEach(function (item) {
+        item.addEventListener("click", function () {
+          const parent = item.parentElement;
+          const type   = parent.dataset.type;
+          const value  = item.dataset.value;
+
+          if (parent.classList.contains("multi")) {
+            // Multi-select: max 2 fillings
+            if (item.classList.contains("selected")) {
+              item.classList.remove("selected");
+              item.setAttribute("aria-selected", "false");
+              state.fillings = state.fillings.filter(function (f) { return f !== value; });
+            } else {
+              if (state.fillings.length >= 2) {
+                alert("You can select up to 2 fillings.");
+                return;
+              }
+              item.classList.add("selected");
+              item.setAttribute("aria-selected", "true");
+              state.fillings.push(value);
             }
-            
-    function CloseTab() {
-        let menuTab = document.getElementById("menuTab");
-        menuTab.style.display = "none";
-    }
-</script>
+          } else {
+            // Single-select
+            parent.querySelectorAll("li").forEach(function (li) {
+              li.classList.remove("selected");
+              li.setAttribute("aria-selected", "false");
+            });
+            item.classList.add("selected");
+            item.setAttribute("aria-selected", "true");
+            state[type] = value;
+          }
+
+          updateMessage();
+        });
+      });
+
+      /* ---- Live summary update ---- */
+
+      document.getElementById("cakeDate").addEventListener("change", updateMessage);
+      document.getElementById("cakeTime").addEventListener("change", updateMessage);
+      document.getElementById("deliveryOption").addEventListener("change", updateMessage);
+
+      function updateMessage() {
+        const rawDate  = document.getElementById("cakeDate").value;
+        const time     = document.getElementById("cakeTime").value;
+        const delivery = document.getElementById("deliveryOption").value;
+
+        let date = "Not informed";
+        if (rawDate) {
+          const [year, month, day] = rawDate.split("-");
+          date = day + "/" + month + "/" + year;
+        }
+
+        const message =
+          "Hello! 😊\n\n" +
+          "I would love to order a cake with the following details:\n\n" +
+          "• Size: "     + (state.size     || "Not selected") + "\n" +
+          "• Sponge: "   + (state.sponge   || "Not selected") + "\n" +
+          "• Fillings: " + (state.fillings.length ? state.fillings.join(", ") : "Not selected") + "\n\n" +
+          "• Date: "     + date + "\n" +
+          "• Time: "     + (time || "Not informed") + "\n" +
+          "• Delivery: " + (delivery === "Delivery" ? "Home delivery" : "Pickup at store") + "\n\n" +
+          "Please let me know availability and next steps.\n\n" +
+          "Thank you so much! 🍰";
+
+        document.getElementById("finalMessage").value = message;
+      }
+
+      /* ---- Send actions ---- */
+
+      function sendEmail() {
+        var message = encodeURIComponent(document.getElementById("finalMessage").value);
+        window.location.href = "mailto:your@email.com?subject=Cake%20Order&body=" + message;
+      }
+
+      function sendWhatsApp() {
+        var message = encodeURIComponent(document.getElementById("finalMessage").value);
+        window.open("https://api.whatsapp.com/send?phone=353830614725&text=" + message, "_blank");
+      }
+
+    </script>
+
+  </body>
 </html>
